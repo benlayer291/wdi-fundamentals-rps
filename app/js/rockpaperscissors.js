@@ -4,9 +4,17 @@
 'use strict';
 
 function getInput() {
-    console.log("Please choose either 'rock', 'paper', or 'scissors'.")
-    return prompt();
+    console.log("Please choose either 'rock', 'paper', or 'scissors'");
+    var promptMove = prompt().toLowerCase();
+    if (promptMove === "rock" || promptMove === "paper" || promptMove === "scissors") {
+        return promptMove;
+    }
+    else {
+        console.log("Please enter 'rock', 'paper', or 'scissors' only!");
+        return getPlayerMove();
+    }
 }
+
 function randomPlay() {
     var randomNumber = Math.random();
     if (randomNumber < 0.33) {
