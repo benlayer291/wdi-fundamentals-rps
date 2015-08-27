@@ -56,14 +56,14 @@ function getWinner(playerMove,computerMove) {
     return winner;
 }
 
-function playToFive() {
+function playToX(x) {
     console.log("Let's play Rock, Paper, Scissors");
-    console.log("The first to five wins the match!");
+    console.log("The first to " + x +  " wins the match!");
     var playerWins = 0;
     var computerWins = 0;
     var round =1;
     
-    while (playerWins < 5 && computerWins < 5) {
+    while (playerWins < x && computerWins < x) {
 
         console.log("ROUND" + round);
 
@@ -88,10 +88,10 @@ function playToFive() {
         console.log("Player score is " + playerWins + " Computer score is " + computerWins);
     }
 
-    if (computerWins === 5) {
-        console.log("Computer wins the  match! " + computerWins + " -" + " " + playerWins);
+    if (computerWins === x) {
+        console.log("Computer wins the  match! " + playerWins + " -" + " " + computerWins);
     }
-    else if (playerWins === 5) {
+    else if (playerWins === x) {
         console.log("Player wins the  match! " + playerWins + " -" + " " + computerWins);
     }
 
